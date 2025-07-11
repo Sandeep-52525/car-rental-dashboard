@@ -5,7 +5,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 const getLogs = async () => {
-  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/logs`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/logs`, {
     cache: "no-store",
   });
 

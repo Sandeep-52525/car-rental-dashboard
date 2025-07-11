@@ -44,9 +44,7 @@ const ListingTable = ({
   const router = useRouter();
   const { data: session } = useSession();
   const postActions = async (id: number, status: "approved" | "rejected") => {
-    // const session = await getAuthSession();
-
-    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/rentals/action/${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/rentals/action/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

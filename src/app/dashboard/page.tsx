@@ -12,7 +12,7 @@ type ReqBody = {
 
 //same as getServerSideProps() method as per latest app routing
 const getListings = async ({ page, limit, status }: ReqBody) => {
-  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/rentals`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/rentals`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
