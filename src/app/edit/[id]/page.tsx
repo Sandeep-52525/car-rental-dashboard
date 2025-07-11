@@ -5,7 +5,7 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { redirect } from "next/navigation";
 
 const getById = async (id: number) => {
-  const res = await fetch(`http://localhost:3000/api/rentals/${id}`);
+  const res = await fetch(`/api/rentals/${id}`);
 
   const vehicleDetails = await res.json();
   return vehicleDetails;

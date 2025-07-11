@@ -12,7 +12,7 @@ type ReqBody = {
 
 //same as getServerSideProps() method as per latest app routing
 const getListings = async ({ page, limit, status }: ReqBody) => {
-  const res = await fetch("http://localhost:3000/api/rentals", {
+  const res = await fetch("/api/rentals", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

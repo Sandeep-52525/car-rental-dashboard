@@ -5,7 +5,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 const getLogs = async () => {
-  const res = await fetch("http://localhost:3000/api/logs", {
+  const res = await fetch("/api/logs", {
     cache: "no-store",
   });
 
