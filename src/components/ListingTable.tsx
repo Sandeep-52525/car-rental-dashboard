@@ -46,7 +46,7 @@ const ListingTable = ({
   const postActions = async (id: number, status: "approved" | "rejected") => {
     // const session = await getAuthSession();
 
-    const res = await fetch(`/api/rentals/action/${id}`, {
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/rentals/action/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

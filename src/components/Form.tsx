@@ -57,7 +57,7 @@ export function EditListingForm({ details }: EditListingFormProps) {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`/api/rentals/${details.id}`, {
+      const response = await fetch(`${process.env.NEXTAUTH_URL}/api/rentals/${details.id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
